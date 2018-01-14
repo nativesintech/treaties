@@ -1,0 +1,16 @@
+{
+  "name": "treaties",
+  "version": "1.0.0",
+  "description": "",
+  "main": "parse.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Erin Spiceland <yes@erin.codes>",
+  "license": "MIT",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "quasix-getopt": "^1.1.0",
+    "standard": "^10.0.3"
+  }
+}
