@@ -1,8 +1,9 @@
 #!/usr/local/bin/node
 
-const cheerio = require('cheerio')
+const ch = require('cheerio')
 const fs = require('fs')
 const options = require('quasix-getopt').parse()
+let doc = null
 
 start()
 
@@ -14,14 +15,17 @@ function start () {
     if (!options[opt]) return usageAndExit(opt)
   })
 
-  fs.readFile(options.file, parseHtml)
+  fs.readFile(options.file, (err, data) => {
+    if (err) return exit(err)
+
+    doc = ch.load(data.toString())
+    const rows = getRows(doc)
+    console.log(rows)
+  })
 }
 
-function parseHtml (err, data) {
-  if (err) throw err
-
-  const doc = cheerio.load(data.toString())
-  console.log(doc.html())
+function getRows (doc) {
+  return doc('table').find('table').find('tr')
 }
 
 function usageAndExit (missingOpt) {
@@ -36,4 +40,9 @@ function usageAndExit (missingOpt) {
 
 function usage () {
   console.log(`Usage: node parse.js --file`)
+}
+
+function exit (err) {
+  if (err) console.error(err.message)
+  process.exit(!!err.message ? 1 : 0)
 }
