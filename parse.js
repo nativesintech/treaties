@@ -3,7 +3,7 @@
 const ch = require('cheerio')
 const fs = require('fs')
 const options = require('quasix-getopt').parse()
-let doc = null
+let $ = null
 
 start()
 
@@ -18,8 +18,8 @@ function start () {
   fs.readFile(options.file, (err, data) => {
     if (err) return exit(err)
 
-    doc = ch.load(data.toString())
-    const rows = getRows(doc)
+    $ = ch.load(data.toString())
+    const rows = getRows($)
 
     // Row 0 is the header, so start at row 1.
     for (let i = 1; i === 1/* TODO restore me !!rows[i] */; i++) {
@@ -29,13 +29,13 @@ function start () {
 }
 
 function parseRow (row) {
-  const cells = doc(row).find('td')
-  const nation = doc(cells[0]).attr('text')
+  const cells = $(row).find('td')
+  const nation = $(cells[0]).attr('text')
   console.log(cells)
 }
 
-function getRows (doc) {
-  return doc('table').find('table').find('tr')
+function getRows ($) {
+  return $('table').find('table').find('tr')
 }
 
 function usageAndExit (missingOpt) {
