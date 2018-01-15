@@ -30,12 +30,25 @@ function start () {
 
 function parseRow (row) {
   const cells = $(row).find('td')
-  const nation = $(cells[0]).attr('text')
-  console.log(cells)
+  const nation = $(cells[0])
+  console.log(nation.children ? Array.isArray(nation.children) : 'no children')
+  console.log(buildTextDeep(nation))
 }
 
 function getRows ($) {
   return $('table').find('table').find('tr')
+}
+
+function buildTextDeep (el) {
+  el = $(el)
+  const result = el.text()
+  let text = ''
+
+  for (let i = 0; el.children[i]; i++) {
+    const child = el.children[i]
+    text += buildTextDeep(child)
+  }
+  return `${result} ${text}`
 }
 
 function usageAndExit (missingOpt) {
