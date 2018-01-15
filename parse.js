@@ -20,8 +20,15 @@ function start () {
 
     doc = ch.load(data.toString())
     const rows = getRows(doc)
-    console.log(rows)
+
+    for (let i = 1; i === 1/* TODO restore me !!rows[i] */; i++) {
+      parseRow(rows[i])
+    }
   })
+}
+
+function parseRow (row) {
+  console.log(row)
 }
 
 function getRows (doc) {
