@@ -21,6 +21,7 @@ function start () {
     doc = ch.load(data.toString())
     const rows = getRows(doc)
 
+    // Row 0 is the header, so start at row 1.
     for (let i = 1; i === 1/* TODO restore me !!rows[i] */; i++) {
       parseRow(rows[i])
     }
@@ -28,7 +29,9 @@ function start () {
 }
 
 function parseRow (row) {
-  console.log(row)
+  const cells = doc(row).find('td')
+  const nation = doc(cells[0]).attr('text')
+  console.log(cells)
 }
 
 function getRows (doc) {
