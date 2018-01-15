@@ -42,7 +42,7 @@ function usageAndExit (missingOpt) {
     console.log(`Option "missingOpt" is required.`)
   }
 
-  process.exit(!!missingOpt ? 1 : 0)
+  process.exit(missingOpt ? 1 : 0)
 }
 
 function usage () {
@@ -51,5 +51,5 @@ function usage () {
 
 function exit (err) {
   if (err) console.error(err.message)
-  process.exit(!!err.message ? 1 : 0)
+  process.exit(err.message ? 1 : 0)
 }
