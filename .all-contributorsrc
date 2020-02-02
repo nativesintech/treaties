@@ -14,6 +14,15 @@
         "doc",
         "code"
       ]
+    },
+    {
+      "login": "arecvlohe",
+      "name": "Adam Recvlohe",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/9747933?v=4",
+      "profile": "https://arecvlohe.github.io/simple-portfolio/",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
