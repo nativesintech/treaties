@@ -1,0 +1,25 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "erinspice",
+      "name": "Catherine \"Erin\" Ishimoticha",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/467627?v=4",
+      "profile": "http://yes.erin.codes",
+      "contributions": [
+        "doc",
+        "code"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "treaties",
+  "projectOwner": "nativesintech",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
