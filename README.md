@@ -1,6 +1,6 @@
 # Treaties
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 ## Intro
@@ -41,6 +41,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tr>
     <td align="center"><a href="http://yes.erin.codes"><img src="https://avatars3.githubusercontent.com/u/467627?v=4" width="100px;" alt=""/><br /><sub><b>Catherine "Erin" Ishimoticha</b></sub></a><br /><a href="https://github.com/nativesintech/treaties/commits?author=erinspice" title="Documentation">📖</a> <a href="https://github.com/nativesintech/treaties/commits?author=erinspice" title="Code">💻</a></td>
+    <td align="center"><a href="https://arecvlohe.github.io/simple-portfolio/"><img src="https://avatars3.githubusercontent.com/u/9747933?v=4" width="100px;" alt=""/><br /><sub><b>Adam Recvlohe</b></sub></a><br /><a href="https://github.com/nativesintech/treaties/commits?author=arecvlohe" title="Documentation">📖</a></td>
   </tr>
 </table>
 
