@@ -11,6 +11,6 @@
   "dependencies": {
     "cheerio": "^1.0.0-rc.2",
     "quasix-getopt": "^1.1.0",
-    "standard": "^10.0.3"
+    "standard": "^17.1.0"
   }
 }
